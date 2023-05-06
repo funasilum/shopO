@@ -13,6 +13,10 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 app.use("/", express.static("uploads"));
+app.use("/", (req, res)=>{
+  console.log("hello world");
+});
+
 
 
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
