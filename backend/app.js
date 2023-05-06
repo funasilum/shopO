@@ -13,7 +13,7 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 app.use("/", express.static("uploads"));
-app.use("/test", (req, res)=>{
+app.get("/test", (req, res)=>{
   console.log("hello world");
 });
 
